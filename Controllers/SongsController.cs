@@ -17,22 +17,11 @@ namespace Lab7.Controllers
         // GET: Songs
         public ActionResult Index()
         {
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("_SongsList.cshtml", db.Songs.ToList());
+            }
             return View(db.Songs.ToList());
-        }
-
-        // GET: Songs/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Song song = db.Songs.Find(id);
-            if (song == null)
-            {
-                return HttpNotFound();
-            }
-            return View(song);
         }
 
         // GET: Songs/Create
@@ -89,25 +78,10 @@ namespace Lab7.Controllers
             return View(song);
         }
 
-        // GET: Songs/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Song song = db.Songs.Find(id);
-            if (song == null)
-            {
-                return HttpNotFound();
-            }
-            return View(song);
-        }
-
         // POST: Songs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult Delete(int id)
         {
             Song song = db.Songs.Find(id);
             db.Songs.Remove(song);

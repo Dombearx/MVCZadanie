@@ -27,6 +27,7 @@ namespace Lab7.Controllers
         // GET: Songs/Create
         public ActionResult Create()
         {
+            ViewBag.Genres = db.Genres.ToList();
             return View();
         }
 
@@ -35,8 +36,9 @@ namespace Lab7.Controllers
         // Aby uzyskać więcej szczegółów, zobacz https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Artist,Genre")] Song song)
+        public ActionResult Create([Bind(Include = "Id,Name,Artist,GenreId")] Song song)
         {
+            ViewBag.Genres = db.Genres.ToList();
             if (ModelState.IsValid)
             {
                 db.Songs.Add(song);

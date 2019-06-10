@@ -126,11 +126,25 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\GenresController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SongsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906062312254_InitialCreate.cs" />
+    <Compile Include="Migrations\201906062312254_InitialCreate.Designer.cs">
+      <DependentUpon>201906062312254_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906100813531_test1.cs" />
+    <Compile Include="Migrations\201906100813531_test1.Designer.cs">
+      <DependentUpon>201906100813531_test1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906100825092_test2.cs" />
+    <Compile Include="Migrations\201906100825092_test2.Designer.cs">
+      <DependentUpon>201906100825092_test2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MusicDbContext.cs" />
     <Compile Include="Models\Song.cs" />
@@ -180,6 +194,11 @@
     <Content Include="Views\Songs\Edit.cshtml" />
     <Content Include="Views\Songs\Index.cshtml" />
     <Content Include="Views\Songs\_SongsList.cshtml" />
+    <Content Include="Views\Genres\Create.cshtml" />
+    <Content Include="Views\Genres\Delete.cshtml" />
+    <Content Include="Views\Genres\Details.cshtml" />
+    <Content Include="Views\Genres\Edit.cshtml" />
+    <Content Include="Views\Genres\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -196,6 +215,17 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201906062312254_InitialCreate.resx">
+      <DependentUpon>201906062312254_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906100813531_test1.resx">
+      <DependentUpon>201906100813531_test1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906100825092_test2.resx">
+      <DependentUpon>201906100825092_test2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

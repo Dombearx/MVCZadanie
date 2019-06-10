@@ -85,3 +85,7 @@ E:\Polibuda\semestr6\aplikacje internetowe\lab77\Lab7\bin\EntityFramework.dll
 E:\Polibuda\semestr6\aplikacje internetowe\lab77\Lab7\bin\EntityFramework.SqlServer.dll
 E:\Polibuda\semestr6\aplikacje internetowe\lab77\Lab7\bin\EntityFramework.xml
 E:\Polibuda\semestr6\aplikacje internetowe\lab77\Lab7\bin\EntityFramework.SqlServer.xml
+E:\Polibuda\semestr6\aplikacje internetowe\lab77\Lab7\obj\Debug\Lab7.Migrations.InitialCreate.resources
+E:\Polibuda\semestr6\aplikacje internetowe\lab77\Lab7\obj\Debug\Lab7.csproj.GenerateResource.cache
+E:\Polibuda\semestr6\aplikacje internetowe\lab77\Lab7\obj\Debug\Lab7.Migrations.test1.resources
+E:\Polibuda\semestr6\aplikacje internetowe\lab77\Lab7\obj\Debug\Lab7.Migrations.test2.resources

@@ -12,5 +12,7 @@ namespace Lab7.Models
 
         public MusicDbContext() : base("DefaultConnection") {
         }
+
+        public System.Data.Entity.DbSet<Lab7.Models.Genre> Genres { get; set; }
     }
 }
